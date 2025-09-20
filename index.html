@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Silder</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <img src="./image/Male-Lion.jpg" class="slide" id="slide">
@@ -15,27 +17,22 @@
 
     <script>
         const images = [
-    "image/Male-Lion.jpg",
-    "image/tigerr.jpg",
-    "image/jaguar.webp",
-    "image/elephant.jpg",
-    "image/elk.webp",
-    "image/gray-wolf.jpg",
-    "image/beer.jpg"
-];
+            "image/Male-Lion.jpg", "image/tigerr.jpg", "image/jaguar.webp", "image/elephant.jpg", "image/elk.webp", "image/gray-wolf.jpg", "image/beer.jpg"
+        ];
 
-let index = 0;
-const slideElement = document.getElementById("slide");
+        let index = 0;
+        const slideElement = document.getElementById("slide");
 
-function next() {
-    index = (index + 1) % images.length;
-    slideElement.src = images[index];
-}
+        function next() {
+            index = (index + 1) % images.length;
+            slideElement.src = images[index];
+        }
 
-function prev() {
-    index = (index - 1 + images.length) % images.length;
-    slideElement.src = images[index];
-}
+        function prev() {
+            index = (index - 1 + images.length) % images.length;
+            slideElement.src = images[index];
+        }
     </script>
 </body>
+
 </html>
