@@ -13,24 +13,36 @@
         <img src="./image/Male-Lion.jpg" class="slide" id="slide">
         <img src="./image/pre.png" class="icon ico-pre" onclick="prev()">
         <img src="./image/next.png" class="icon ico-next" onclick="next()">
+        <div class="caption" id="caption">
+        <div id="main-name">Lion</div>
+    </div>
     </div>
 
     <script>
         const images = [
-            "image/Male-Lion.jpg", "image/tigerr.jpg", "image/jaguar.webp", "image/elephant.jpg", "image/elk.webp", "image/gray-wolf.jpg", "image/beer.jpg"
+            { src: "image/Male-Lion.jpg", name: "Lion" },
+            { src: "image/tigerr.jpg", name: "Tiger" },
+            { src: "image/jaguar.webp", name: "Jaguar" },
+            { src: "image/elephant.jpg", name: "Elephant" },
+            { src: "image/elk.webp", name: "Elk" },
+            { src: "image/gray-wolf.jpg", name: "Gray Wolf" },
+            { src: "image/beer.jpg", name: "Bear" }
         ];
 
         let index = 0;
         const slideElement = document.getElementById("slide");
+        const captionElement = document.getElementById("caption");
 
         function next() {
             index = (index + 1) % images.length;
-            slideElement.src = images[index];
+            slideElement.src = images[index].src;
+            captionElement.textContent = images[index].name;
         }
 
         function prev() {
             index = (index - 1 + images.length) % images.length;
-            slideElement.src = images[index];
+            slideElement.src = images[index].src;
+            captionElement.textContent = images[index].name;
         }
     </script>
 </body>
