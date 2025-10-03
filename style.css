@@ -45,3 +45,14 @@ body{
     font-size: larger;
     font-weight: bold;
 }
+
+@media screen and (max-width:600px){
+    .slide{
+        height: 300px;
+        width: 100%;
+    }
+
+    .icon{
+        height: 60px;
+    }
+}
